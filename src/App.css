@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
 }
 
 .App-logo {
@@ -35,4 +39,122 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  width: 453px;
+  height: 288px;
+  border-radius: 21px;
+  overflow: hidden;
+  transition: transform 0.1s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.card-gradient {
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  background: linear-gradient(135deg, #f8b4fe 0%, #3e3099 100%);
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 49px;
+  transform: translateZ(20px);
+}
+
+.bank-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.bank-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.card-number {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 49px;
+  transform: translateZ(20px);
+}
+
+.card-footer {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  transform: translateZ(20px);
+}
+
+.holder-info {
+  flex: 1;
+  max-width: 155px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expiry-info {
+  width: 97px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  color: white;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.value {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mastercard-logo {
+  position: relative;
+  width: 63px;
+  height: 37px;
+}
+
+.circle {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+}
+
+.circle.red {
+  background-color: #e33a24;
+  left: 0;
+}
+
+.circle.yellow {
+  background-color: #f8cb2e;
+  opacity: 0.8;
+  right: 0;
+}
+
+.card-type {
+  width: 63px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
